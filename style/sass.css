@@ -47,9 +47,14 @@ section table thead tr th {
 }
 section tbody tr {
   border: 3px solid white;
+  transition: 0.3s;
+}
+section tbody tr:hover {
+  background-color: #333;
+  cursor: pointer;
 }
 section tbody tr td {
   padding: 15px 10px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 21px;
 }
