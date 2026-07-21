@@ -14,7 +14,7 @@ input[type=number] {
 
 section input {
   width: 100%;
-  height: 60px;
+  height: 75px;
   background: #111;
   margin: 13px 0;
   padding: 10px;
@@ -30,7 +30,7 @@ section input:focus {
   transform: scale(1.04);
 }
 section .price input {
-  width: 21%;
+  width: 20.5%;
   margin-right: 10px;
 }
 section table thead {

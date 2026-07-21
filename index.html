@@ -11,9 +11,9 @@
     <title>Management System</title>
 
 
+    <!-- Favacion -->
+    <link rel="shortcut icon" href="Imgs/img-website.png" type="image/x-icon">
 
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="style/style.css">
 
     <!-- Sass CSS -->
     <link rel="stylesheet" href="style/sass.css">
@@ -25,10 +25,16 @@
 
 <body class="bg-[#222]">
 
+    <!-- رساله تحذير -->
+    <div id="alert-msg"
+        class="hidden bg-red-500/10 border border-red-500 text-red-400 font-bold px-4 py-3 rounded-lg text-center my-4 transition-all duration-500">
+        ⚠️ من فضلك ادخل البيانات كاملة
+    </div>
+
     <!-- Section Crud Start -->
     <section id="crud" class="my-16 w-[80%] min-h-screen mx-auto text-white">
 
-        <div id="title" class="text-center text-white font-bold mb-10">
+        <div class="text-center text-white font-bold mb-10">
             <h1 class="text-4xl mb-2">Cruds</h1>
             <p class="text-2xl">Create Read Update Delete Search</p>
         </div>
@@ -40,8 +46,8 @@
             <input type="number" id="ads" placeholder="ADS">
             <input type="number" id="discount" placeholder="discount">
             <samall id="total"
-                class="bg-red-400 w-auto ms-2 rounded-[10px] px-10 py-[13px] text-center font-bold text-[19px] inline-block hover:bg-red-600 duration-200 cursor-pointer">
-                2500</samall>
+                class="bg-red-400 w-auto ms-2 rounded-[10px] px-3 py-[18px] text-center font-bold text-[19px] inline-block hover:bg-red-600 duration-200 cursor-pointer before:content-['Total:']">
+            </samall>
         </div>
 
         <input type="number" id="count" placeholder="Count">
@@ -51,14 +57,14 @@
         <input type="text" placeholder="Search" id="search">
         <div class="flex justify-between items-center">
             <button id="searchTitle"
-                class="bg-[#4f036c] font-bold text-[21px] py-3 px-3 rounded-2xl mb-10 mt-2 w-[40%] cursor-pointer hover:bg-[#6f0e96] duration-300">Search
+                class="bg-[#4f036c] font-bold text-[21px] py-4 overflow-hidden px-3 rounded-2xl mb-10 mt-2 w-[40%] cursor-pointer hover:bg-[#6f0e96] duration-300">Search
                 By Title</button>
             <button id="searchCategory"
-                class="bg-[#4f036c] font-bold text-[21px] py-3 px-3 rounded-2xl mb-10 mt-2 w-[40%] cursor-pointer hover:bg-[#6f0e96] duration-300">Search
+                class="bg-[#4f036c] font-bold text-[21px] py-4 overflow-hidden px-3 rounded-2xl mb-10 mt-2 w-[40%] cursor-pointer hover:bg-[#6f0e96] duration-300">Search
                 By Categroy</button>
         </div>
 
-        <table class="w-full text-center mt-5 text-white overflow-hidden">
+        <table class="w-full text-center mt-5 text-white hidden">
             <thead>
                 <tr class="text-[21px]">
                     <th>ID</th>
@@ -67,27 +73,13 @@
                     <th>Taxes</th>
                     <th>Ads</th>
                     <th>Discount</th>
-                    <th>Total</th> 
+                    <th>Total</th>
                     <th>Category</th>
                     <th>Update</th>
                     <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
-                
-                <tr>
-                    <td>1</td>
-                    <td>Oppo</td>
-                    <td>7500</td>
-                    <td>150</td>
-                    <td>50</td>
-                    <td>30</td>
-                    <td>2500</td>
-                    <td>Phone</td>
-                    <td><button class="bg-[#310044] font-bold text-[17px] px-6 py-4 rounded cursor-pointer hover:bg-[#5a037d] duration-300">Update</button></td>
-                    <td><button class="bg-red-600 font-bold text-[17px] px-6 py-4 rounded cursor-pointer hover:bg-red-800 duration-300">Delete</button></td>
-                </tr>
-
             </tbody>
         </table>
     </section>
