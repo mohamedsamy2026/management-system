@@ -13,8 +13,8 @@ let searchTitle = $("#searchTitle");
 let searchCategory = $("#searchCategory");
 
 let searchMood = "title";
-let tmp;
 let status = "create";
+let tmp;
 let num = 1;
 // Elemnts End
 
@@ -40,6 +40,7 @@ function getTatal() {
     total.text("");
   }
 }
+
 $("#price , #taxes , #ads , #discount").on("keyup", function () {
   getTatal();
 });
