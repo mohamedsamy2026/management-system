@@ -46,7 +46,7 @@
             <input type="number" id="ads" placeholder="ADS">
             <input type="number" id="discount" placeholder="discount">
             <samall id="total"
-                class="bg-red-400 w-auto ms-2 rounded-[10px] px-3 py-[18px] text-center font-bold text-[19px] inline-block hover:bg-red-600 duration-200 cursor-pointer before:content-['Total:']">
+                class="bg-red-400 w-auto ms-2 rounded-[10px] px-3 py-[18px] text-center font-bold text-[19px] inline-block hover:bg-red-600 duration-200 cursor-pointer before:content-['Total:'] xl:w-auto w-full">
             </samall>
         </div>
 
@@ -55,33 +55,35 @@
         <button id="create"
             class="w-[100%] py-5 rounded-[10px] text-2xl font-bold my-2 cursor-pointer bg-[#4f036c] hover:bg-[#620487] duration-300">Create</button>
         <input type="text" placeholder="Search" id="search">
-        <div class="flex justify-between items-center">
+        <div class="flex xl:flex-row xl:justify-between flex-col items-center">
             <button id="searchTitle"
-                class="bg-[#4f036c] font-bold text-[21px] py-4 overflow-hidden px-3 rounded-2xl mb-10 mt-2 w-[40%] cursor-pointer hover:bg-[#6f0e96] duration-300">Search
+                class=" bg-[#4f036c] font-bold text-[21px] py-4 overflow-hidden px-3 rounded-2xl mb-10 mt-2 w-full xl:w-[40%] cursor-pointer hover:bg-[#6f0e96] duration-300">Search
                 By Title</button>
             <button id="searchCategory"
-                class="bg-[#4f036c] font-bold text-[21px] py-4 overflow-hidden px-3 rounded-2xl mb-10 mt-2 w-[40%] cursor-pointer hover:bg-[#6f0e96] duration-300">Search
+                class=" bg-[#4f036c] font-bold text-[21px] py-4 overflow-hidden px-3 rounded-2xl mb-10 mt-2 w-full xl:w-[40%] cursor-pointer hover:bg-[#6f0e96] duration-300">Search
                 By Categroy</button>
         </div>
+        <div class="overflow-x-auto w-full">
+            <table class="w-full text-center mt-5 text-white hidden">
+                <thead>
+                    <tr class="text-[21px]">
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>Taxes</th>
+                        <th>Ads</th>
+                        <th>Discount</th>
+                        <th>Total</th>
+                        <th>Category</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
 
-        <table class="w-full text-center mt-5 text-white hidden">
-            <thead>
-                <tr class="text-[21px]">
-                    <th>ID</th>
-                    <th>Title</th>
-                    <th>Price</th>
-                    <th>Taxes</th>
-                    <th>Ads</th>
-                    <th>Discount</th>
-                    <th>Total</th>
-                    <th>Category</th>
-                    <th>Update</th>
-                    <th>Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+        </div>
     </section>
     <!-- Section Crud End -->
 
