@@ -49,6 +49,7 @@ $("#price , #taxes , #ads , #discount").on("keyup", function () {
 
 
 // Create Product Start
+
 let data = [];
 function createProduct() {
   if (title.val() != "" && price.val() != "") {
@@ -133,6 +134,14 @@ function showData() {
 
 
   $("table tbody").html(table);
+
+  if (data.length > 0) {
+    $("#btn").removeClass("hidden");
+    $("#btn").text(`Delete All (${data.length})`)
+
+  } else {
+    $("#btn").addClass("hidden");
+  }
   set()
 }
 // Read Products End
@@ -268,3 +277,10 @@ search.on("keyup", function () {
 })
 
 // Search End
+
+
+$("#btn").on("click", function(){
+  data = []
+  showData();
+  set()
+})
